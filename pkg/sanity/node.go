@@ -369,7 +369,8 @@ var _ = DescribeSanity("Node Service", func(sc *SanityContext) {
 						},
 					},
 				},
-				Secrets: sc.Secrets.CreateVolumeSecret,
+				Secrets:    sc.Secrets.CreateVolumeSecret,
+				Parameters: sc.Config.TestVolumeParameters,
 			},
 		)
 		Expect(err).NotTo(HaveOccurred())
